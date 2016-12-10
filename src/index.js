@@ -11,17 +11,17 @@ import Login from './login/login';
 import SignUp from './signup/signup';
 import Subscribe from './subscribe/subscribe';
 import IndexComponent from './homepage/index';
+import Disclaimer from './disclaimer/disclaimer';
 const browserHistory = createBrowserHistory();
 
 const routes = (
 	<Router history={ browserHistory }>
-	<Route component= { IndexComponent }> Home </Route>
-	<Route component= { Login }> Log-In</Route>
-	<Route component= {SignUp }> Sign-Up </Route>
-	<Route component={ IndexComponent }></Route>
-	<Route component= { Disclaimer }></Route>
-	<Route component= { Subscribe }></Route>
-	<Route component= {ContactUs}></Route>
+	<Route path='/login' component= { Login } />
+	<Route path='/signup' component= {SignUp } />
+	<Route path='/' component={ IndexComponent }/>
+	<Route path='/disclaimer' component= { Disclaimer }/>
+	<Route path='/subscribe' component= { Subscribe }/>
+	<Route paht='/contact' component= {ContactUs}/>
 	</Router>
 );
 

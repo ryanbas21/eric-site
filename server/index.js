@@ -20,13 +20,17 @@ app.use((req,res,next) => {
   next();
 });
 
-
-
-
 app.get('/', (req,res) => res.sendFile('index.html', { root: path.join( __dirname + './../public/') } ));
 app.get('/styles.css', (req,res) => res.sendFile('styles.css', { root: path.join( __dirname + './../public')}))
-// app.get('/foundation.css', (req,res) => res.sendFile('foundation'))
+app.get('/login', (req,res) => res.status(200).end() )
+app.get('/signup', (req,res) => res.status(200).end() )
+app.get('/disclaimer', (req,res) => res.status(200).end() )
+app.get('/contact', (req,res) => res.status(200).end() )
+app.get('/login', (req,res) => res.status(200).end() )
 
+
+//component routes
+app.get('')
 //routes to load pictures
 app.get('/bubble', (req,res) => {
   console.log('hi this works');
