@@ -9,11 +9,18 @@ module.exports = {
 	},
 	//devtool: 'source-map',
 	module: {
-		loaders: [{
+		loaders: [
+		{
 			test: /\.js$/,
 			loader: 'babel-loader'
-		}]
-	},
+		},
+	 {
+		 test: /\.(jpe?g|png|gif|svg)$/i, loader: "file"
+	 },
+	 {
+		 test: /\.css$/, loaders: ["style","css"]
+ 	 }
+ ]},
 	devServer: {
 		contentBase: './',
 		port: 8080,
@@ -21,13 +28,14 @@ module.exports = {
 		hot: true,
 		inline: true,
 		proxy: {
-			'/': {
-				bypass: function (req, res, proxyOptions) {
-					return '/public/index.html';
-				}
+				'/': {
+					bypass: function (req, res, proxyOptions) {
+						return '/public/index.html';
+					}
+				},
+	   		'**': { target: 'http://localhost:3000', secure: false }
 			}
-		}
-	},
+		},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin()
 	]
