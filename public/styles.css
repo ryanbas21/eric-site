@@ -1,0 +1,7 @@
+.homepage-pictures {
+  width: 500px;
+  height: auto;
+  /* margin-left: 20px; */
+  display: flex;
+  align-content:space-around;
+}

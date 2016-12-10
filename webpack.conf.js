@@ -1,9 +1,11 @@
 const webpack = require('webpack');
+const WriteFilePlugin = require('write-file-webpack-plugin');
+const path = require('path');
 
 module.exports = {
 	entry: './src/index.js',
 	output: {
-		path: '.',
+		path: path.join(__dirname, './public'),
 		filename: 'bundle.js',
 		publicPath: 'http://localhost:8080/'
 	},
@@ -27,16 +29,18 @@ module.exports = {
 		noInfo: false,
 		hot: true,
 		inline: true,
+		outputPath: path.join(__dirname, './public'),
 		proxy: {
 				'/': {
 					bypass: function (req, res, proxyOptions) {
 						return '/public/index.html';
 					}
 				},
-	   		'**': { target: 'http://localhost:3000', secure: false }
+						'**': { target: 'http://localhost:3000', secure: false }
 			}
 		},
 	plugins: [
-		new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin(),
+		new WriteFilePlugin()
 	]
 };

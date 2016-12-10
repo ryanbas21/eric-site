@@ -1,33 +1,64 @@
-'use strict'
+// 'use strict'
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieparser = require('cookie-parser');
 const cors = require('cors');
 const app = express();
 const path = require('path');
-const PORT = process.env.port || 3000;
+const foundation = require('foundation');
+const PORT = 3000;
 
 bodyParser.urlencoded({ extended: false });
 app.use(bodyParser.json());
 app.use(cookieparser());
+
+// app.use(express.static(__dirname + '../public/'))
 app.use((req,res,next) => {
   res.header('Acess-Control-Allow-Origin', 'http://localhost:8080');
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
 });
-app.use(express.static(path.join(__dirname, './public')));
 
 
-app.get('/', (req,res) => res.send('Some Data').status(200).json());
+
+
+app.get('/', (req,res) => res.sendFile('index.html', { root: path.join( __dirname + './../public/') } ));
+app.get('/styles.css', (req,res) => res.sendFile('styles.css', { root: path.join( __dirname + './../public')}))
+// app.get('/foundation.css', (req,res) => res.sendFile('foundation'))
+
 //routes to load pictures
 app.get('/bubble', (req,res) => {
   console.log('hi this works');
-  res.sendFile('bubble.png', { root: path.join(__dirname, './assests') })
-  })
-app.get('/chartoftheday', (req,res) => res.sendFile('chartoftheday.png', { root: path.join(__dirname, './assests') }))
-app.get('/ism', (req,res) => res.sendFile('ism.png', { root: path.join(__dirname, './assests') }))
-app.get('/jobsreport', (req,res) => res.sendFile('jobsreport.png', { root: path.join(__dirname, './assests') }))
-app.get('/usvcanada', (req,res) => res.sendFile('usvcanada.png', { root: path.join(__dirname, './assests') }))
-app.get('/favicon.ico', (req,res) => res.status(200).end());
-app.listen( () => console.log('Server running on ' + PORT));
+    res
+      .status(200)
+      .sendFile('bubble.png', { root: path.join( __dirname, '../public/assets') })
+});
+app.get('/chart', (req,res) => {
+        res
+        .status(200)
+        .sendFile('chart.png', { root: path.join(__dirname, '../public/assets') })
+})
+app.get('/ism', (req,res) => {
+    res
+      .status(200)
+      .sendFile('ism.png', { root: path.join(__dirname, '../public/assets/') })
+})
+app.get('/jobsreport', (req,res) =>{
+   res
+   .status(200)
+   .sendFile('jobsreport.png', { root: path.join(__dirname, '../public/assets/') })
+})
+app.get('/usvcanada', (req,res) =>{
+   res
+   .status(200)
+   .sendFile('usvcanada.png', { root: path.join(__dirname, '../public/assets/') })
+})
+
+app.get('/favicon.ico', (req,res) => res.status(200).end() );
+
+
+
+
+
+app.listen(PORT, 'localhost', () => console.log('Server running on ' + PORT) );

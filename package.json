@@ -37,7 +37,8 @@
     "glob": "^7.1.1",
     "url": "^0.11.0",
     "webpack": "^1.12.11",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "write-file-webpack-plugin": "^3.4.2"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -45,6 +46,7 @@
     "cors": "^2.8.1",
     "css-loader": "^0.26.1",
     "express": "^4.14.0",
+    "foundation": "^4.2.1-1",
     "history": "^4.4.0",
     "inferno": "1.0.0-beta32",
     "inferno-component": "1.0.0-beta32",

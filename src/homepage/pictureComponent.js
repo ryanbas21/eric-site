@@ -4,10 +4,10 @@ import Inferno from 'inferno';
 
 const Picture = props =>
   <div>
-    <img src='./public/assests/bubble.png' />
-    <img src='./public/assests/chartoftheday.png' />
-    <img src='./public/assests/ism.png' />
-    <img src='./public/assests/usvcanada.png' />
+    <img className='homepage-pictures' src='bubble' />
+    <img className='homepage-pictures' src='chart' />
+    <img className='homepage-pictures' src='ism' />
+    <img className='homepage-pictures' src='usvcanada' />
   </div>
 
 export default Picture
