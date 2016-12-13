@@ -63,7 +63,7 @@
 /******/ 	}
 
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "92c87eb75fe6ab7a8f04"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "55218f8f71778a69abf4"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 
@@ -8310,9 +8310,9 @@
 
 	var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
 
-	var _contactus = __webpack_require__(102);
+	var _contactUs = __webpack_require__(101);
 
-	var _contactus2 = _interopRequireDefault(_contactus);
+	var _contactUs2 = _interopRequireDefault(_contactUs);
 
 	var _login = __webpack_require__(103);
 
@@ -8361,8 +8361,8 @@
 			'path': '/subscribe',
 			'component': _subscribe2.default
 		}), _inferno2.default.createVNode(16, _infernoRouter.Route, {
-			'paht': '/contact',
-			'component': _contactus2.default
+			'path': '/contact',
+			'component': _contactUs2.default
 		})]
 	});
 
@@ -12936,7 +12936,7 @@
 	      return _inferno2.default.createVNode(2, 'div', null, [_inferno2.default.createVNode(16, _navBar2.default), _inferno2.default.createVNode(2, 'h1', null, 'EPB RESEARCH'), _inferno2.default.createVNode(2, 'button', {
 	        'type': 'submit',
 	        'className': 'button',
-	        'onClick': this.subscribe
+	        'onClick': '/subscribe'
 	      }, 'Subscribe'), _inferno2.default.createVNode(16, _pictureComponent2.default)]);
 	    }
 	  }]);
@@ -13031,8 +13031,8 @@
 	    'to': '/',
 	    children: ' Home '
 	  })), _inferno2.default.createVNode(2, 'li', null, _inferno2.default.createVNode(16, _infernoRouter.Link, {
-	    'to': '/contact ',
-	    children: ' ContactUs '
+	    'to': '/contact',
+	    children: ' Contact Us '
 	  })), _inferno2.default.createVNode(2, 'li', null, _inferno2.default.createVNode(16, _infernoRouter.Link, {
 	    'to': '/disclaimer',
 	    children: ' Disclaimer '
@@ -13051,7 +13051,28 @@
 	exports.default = NavBar;
 
 /***/ },
-/* 101 */,
+/* 101 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _inferno = __webpack_require__(79);
+
+	var _inferno2 = _interopRequireDefault(_inferno);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ContactUs = function ContactUs(props) {
+	  return _inferno2.default.createVNode(2, 'div', null, [_inferno2.default.createVNode(2, 'h3', null, ' EPB Research'), _inferno2.default.createVNode(2, 'p', null, 'Please email eric@epbadvising.com for all inquiries.'), _inferno2.default.createVNode(2, 'p', null, 'Feedback is greatly appreciated.  I look forward to hearing from you!'), _inferno2.default.createVNode(2, 'h4', null, 'Customer Service'), _inferno2.default.createVNode(2, 'p', null, 'Need to unsubscribe?  Go to this link for instructions on cancelling your plan(the whole process should take under 2 minutes).My goal is to respond to every email within 1 business day.A few of the most common questions I get are below:'), _inferno2.default.createVNode(2, 'h3', null, 'F.A.Q'), _inferno2.default.createVNode(2, 'p', null, _inferno2.default.createVNode(2, 'h5', null, 'When is the next newsletter coming out?')), _inferno2.default.createVNode(2, 'p', null, 'The newsletter is always sent out the first Monday of the month.If a holiday lands on a Monday, the newsletter will be sent out Tuesday morning.The newsletter should hit your inbox at 6am.As a newsletter provider I cannot give personalized investment advice.I do not know your personal situation, and will not make individual recommendations.'), _inferno2.default.createVNode(2, 'p', null, 'Thanks,'), _inferno2.default.createVNode(2, 'p', null, 'Eric Basmajian')]);
+	};
+
+	exports.default = ContactUs;
+
+/***/ },
 /* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -13090,7 +13111,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Login = function Login(props) {
-	  return Inferno.createVNode(2, 'div', null, 'Log In ');
+	  return _inferno2.default.createVNode(2, 'div', null, 'Log In ');
 	};
 
 	exports.default = Login;

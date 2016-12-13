@@ -6,7 +6,7 @@ import { Router, Route } from 'inferno-router';
 import createBrowserHistory from 'history/createBrowserHistory';
 
 // app components
-import ContactUs from './contact/contactus';
+import ContactUs from './contact/contactUs';
 import Login from './login/login';
 import SignUp from './signup/signup';
 import Subscribe from './subscribe/subscribe';
@@ -21,7 +21,7 @@ const routes = (
 	<Route path='/' component={ IndexComponent }/>
 	<Route path='/disclaimer' component= { Disclaimer }/>
 	<Route path='/subscribe' component= { Subscribe }/>
-	<Route paht='/contact' component= {ContactUs}/>
+	<Route path='/contact' component= { ContactUs }/>
 	</Router>
 );
 

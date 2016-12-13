@@ -7,7 +7,18 @@ const app = express();
 const path = require('path');
 const foundation = require('foundation');
 const PORT = 3000;
+const userTable = require('./models/user.model');
 
+
+/*******************************************************************************
+*
+*
+*
+*                              Middleware Setup
+*
+*
+*
+******************************************************************************/
 bodyParser.urlencoded({ extended: false });
 app.use(bodyParser.json());
 app.use(cookieparser());
@@ -20,18 +31,30 @@ app.use((req,res,next) => {
   next();
 });
 
+
+/*******************************************************************************
+*
+*
+*
+*                              Routes
+*
+*
+*
+******************************************************************************/
 app.get('/', (req,res) => res.sendFile('index.html', { root: path.join( __dirname + './../public/') } ));
 app.get('/styles.css', (req,res) => res.sendFile('styles.css', { root: path.join( __dirname + './../public')}))
-app.get('/login', (req,res) => res.status(200).end() )
-app.get('/signup', (req,res) => res.status(200).end() )
-app.get('/disclaimer', (req,res) => res.status(200).end() )
-app.get('/contact', (req,res) => res.status(200).end() )
-app.get('/login', (req,res) => res.status(200).end() )
-
-
-//component routes
 app.get('')
-//routes to load pictures
+
+
+/*******************************************************************************
+*
+*
+*
+*                              Homepage Routes
+*
+*
+*
+******************************************************************************/
 app.get('/bubble', (req,res) => {
   console.log('hi this works');
     res
@@ -59,10 +82,11 @@ app.get('/usvcanada', (req,res) =>{
    .sendFile('usvcanada.png', { root: path.join(__dirname, '../public/assets/') })
 })
 
+
+
+
+
+
+
 app.get('/favicon.ico', (req,res) => res.status(200).end() );
-
-
-
-
-
 app.listen(PORT, 'localhost', () => console.log('Server running on ' + PORT) );

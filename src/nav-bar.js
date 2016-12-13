@@ -10,7 +10,7 @@ const NavBar = props =>
   <nav data-magellan-expedition="fixed">
     <dl class="sub-nav">
       <li><Link to='/'> Home </Link></li>
-      <li><Link to='/contact '> ContactUs </Link></li>
+      <li><Link to='/contact'> Contact Us </Link></li>
       <li><Link to='/disclaimer'> Disclaimer </Link></li>
       <li><Link to='/login'> Log-In </Link></li>
       <li><Link to='/signup'> Sign Up </Link></li>

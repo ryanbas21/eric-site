@@ -13,7 +13,6 @@ class IndexComponent extends Component {
   }
 
   subscribe(){
-
   }
 
   render(){
@@ -21,7 +20,7 @@ class IndexComponent extends Component {
       <div>
         <NavBar />
         <h1>EPB RESEARCH</h1>
-        <button type='submit' className='button' onClick={this.subscribe}>Subscribe</button>
+        <button type='submit' className='button' onClick='/subscribe'>Subscribe</button>
         <Picture />
       </div>
     )

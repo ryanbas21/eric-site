@@ -1,10 +1,10 @@
 {
-  "name": "inferno-boilerplate",
+  "name": "EPB Newsletter",
   "version": "0.0.1",
-  "description": "A basic boilerplate to get you started with Inferno + Inferno Router + JSX",
+  "description": "EPB Newsletter",
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack-dev-server --quiet --config webpack.conf.js --host 0.0.0.0"
+    "start": "webpack-dev-server --quiet --config webpack.conf.js --host 0.0.0.0 nodemon server/index.js"
   },
   "repository": {
     "type": "git",
@@ -52,6 +52,8 @@
     "inferno-component": "1.0.0-beta32",
     "inferno-create-element": "1.0.0-beta32",
     "inferno-router": "1.0.0-beta32",
+    "pg": "^6.1.2",
+    "sequelize": "^3.27.0",
     "style-loader": "^0.13.1"
   }
 }

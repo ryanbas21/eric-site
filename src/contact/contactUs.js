@@ -20,9 +20,8 @@ const ContactUs = props =>
         As a newsletter provider I cannot give personalized investment advice.
          I do not know your personal situation, and will not make individual recommendations.
     </p>
-
 <p>Thanks,</p>
 <p>Eric Basmajian</p>
 </div>
 
-  export default ContactUs
+  export default ContactUs;
