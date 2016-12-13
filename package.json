@@ -1,6 +1,6 @@
 {
-  "name": "EPB Newsletter",
-  "version": "0.0.1",
+  "name": "EPB-Newsletter",
+  "version": "0.1.0",
   "description": "EPB Newsletter",
   "main": "src/index.js",
   "scripts": {
@@ -8,20 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trueadm/inferno-boilerplate.git"
+    "url": "git+https://github.com/ryanbas21/eric-site.git"
   },
   "keywords": [
     "inferno",
-    "boilerplate",
-    "cerebral",
+    "EPB",
+    "Brain-Freeze",
     "jsx"
   ],
-  "author": "Dominic Gannaway",
+  "author": "Ryan Basmajian",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trueadm/inferno-boilerplate/issues"
+    "url": "https://github.com/ryanbas21/eric-site/issues"
   },
-  "homepage": "https://github.com/trueadm/inferno-boilerplate#readme",
+  "homepage": "https://github.com/ryanbas21/eric-site#readme",
   "devDependencies": {
     "babel-core": "^6.4.0",
     "babel-eslint": "^4.1.6",
@@ -41,6 +41,7 @@
     "write-file-webpack-plugin": "^3.4.2"
   },
   "dependencies": {
+    "bcrypt": "^1.0.1",
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.1",

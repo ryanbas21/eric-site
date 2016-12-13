@@ -1,16 +1,5 @@
-# inferno-boilerplate
+# EPB Newsletter
 
 ## Overview
 
-This is a very basic boilerplate example for people wanting to get started with Inferno. This boilerplate uses `inferno@beta32`, `webpack`, `babel` and the `babel-plugin-inferno` JSX Babel plugin.
-This boilerplate shows how to use `inferno-router` in a very simple way.
-
-## Getting started
-
-Clone this repository locally and then run `npm install`.
-
-To run the example app, run `npm start`. View `http://localhost:8080` in your browser to see the boilerplate example.
-
-## Requirements
-
-Required NodeJS v6+ to use `inferno-boilerplate`.
+This is a website created for Eric. It is an inferno-postgres-express-node stack, using an implementation of Brain-Freeze, a redux like library that gives the developer more control over the state of the application. The purpose of this project is to produce a fast, and responsive application that can scale and work on any device as necessary.

@@ -9,16 +9,19 @@ class IndexComponent extends Component {
     this.state = {
 
     };
-    this.subscribe = this.subscribe.bind(this)  ;
+    this.subscribe = this.subscribe.bind(this);
+    this.handleForm = this.handleForm.bind(this);
   }
 
-  subscribe(){
+  subscribe(){}
+  handleForm(e) {
+
   }
 
   render(){
     return (
       <div>
-        <NavBar />
+        <NavBar handleForm={this.handleForm}/>
         <h1>EPB RESEARCH</h1>
         <button type='submit' className='button' onClick='/subscribe'>Subscribe</button>
         <Picture />

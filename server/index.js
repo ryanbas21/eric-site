@@ -19,6 +19,7 @@ const userTable = require('./models/user.model');
 *
 *
 ******************************************************************************/
+const { getUser, createUser } = require('./controllers/usercontroller');
 bodyParser.urlencoded({ extended: false });
 app.use(bodyParser.json());
 app.use(cookieparser());
@@ -44,6 +45,18 @@ app.use((req,res,next) => {
 app.get('/', (req,res) => res.sendFile('index.html', { root: path.join( __dirname + './../public/') } ));
 app.get('/styles.css', (req,res) => res.sendFile('styles.css', { root: path.join( __dirname + './../public')}))
 app.get('')
+
+/*******************************************************************************
+*
+*
+*
+*                              Login/SignUp
+*
+*
+*
+******************************************************************************/
+app.get('/signupnow', createUser, (req,res) => res.status(200).send());
+app.get('/checkUser', getUser, (req,res) => res.status(200).send());
 
 
 /*******************************************************************************

@@ -6,6 +6,7 @@ import SignUp from './signup/signup';
 import Subscribe from './subscribe/subscribe';
 import IndexComponent from './homepage/index';
 import Disclaimer from './disclaimer/disclaimer';
+
 const NavBar = props =>
   <nav data-magellan-expedition="fixed">
     <dl class="sub-nav">

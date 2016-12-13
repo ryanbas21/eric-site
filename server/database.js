@@ -16,9 +16,7 @@ const sequelize = new Sequelize('database_name', 'username', 'password', {
 
 sequelize
   .authenticate()
-  .then( err => console.log('Connection has been established successfully.'),
-         err => console.log(`Unable to connect to the database: ${err}`)
-      );
-
+  .then( err => console.log('Connection has been established successfully.'))
+  .catch( err => console.log(`Unable to connect to the database: ${err}`));
 
 module.exports = sequelize;
