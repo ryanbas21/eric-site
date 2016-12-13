@@ -63,7 +63,7 @@
 /******/ 	}
 
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "158be8970763aa5fb302"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "92b9ae7925a8b643ad53"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 
@@ -13108,9 +13108,11 @@
 
 	var NavBar = function NavBar(props) {
 	  return _inferno2.default.createVNode(2, 'nav', {
-	    'data-magellan-expedition': 'fixed'
-	  }, _inferno2.default.createVNode(2, 'dl', {
-	    'class': 'sub-nav'
+	    'className': 'breadcrumbs',
+	    'role': 'menubar',
+	    'ariaLabel': 'breadcrumbs'
+	  }, _inferno2.default.createVNode(2, 'ul', {
+	    'className': 'no-bullet'
 	  }, [_inferno2.default.createVNode(2, 'li', null, _inferno2.default.createVNode(16, _infernoRouter.Link, {
 	    'to': '/',
 	    children: ' Home '

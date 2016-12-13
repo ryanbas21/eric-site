@@ -8,15 +8,15 @@ import IndexComponent from './homepage/index';
 import Disclaimer from './disclaimer/disclaimer';
 
 const NavBar = props =>
-  <nav data-magellan-expedition="fixed">
-    <dl class="sub-nav">
+<nav className="breadcrumbs" role='menubar' ariaLabel="breadcrumbs">
+  <ul className='no-bullet'>
       <li><Link to='/'> Home </Link></li>
       <li><Link to='/contact'> Contact Us </Link></li>
       <li><Link to='/disclaimer'> Disclaimer </Link></li>
       <li><Link to='/login'> Log-In </Link></li>
       <li><Link to='/signup'> Sign Up </Link></li>
       <li><Link to='/subscribe'> Subscribe </Link></li>
-    </dl>
+    </ul>
   </nav>
 
 
