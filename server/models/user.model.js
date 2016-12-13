@@ -1,5 +1,4 @@
 
-
 /******************************************************************************
 *
 *
@@ -11,7 +10,9 @@
 * updateAttributes / save on a model, updatedAt will be set.
 *
 * *****************************************************************************/
-const User = sequelize.define('User', {
+const Sequelize = require('sequelize');
+
+const User = {
   password: {
     type: Sequelize.STRING,
     allowNull: false
@@ -23,15 +24,6 @@ const User = sequelize.define('User', {
     type: Sequelize.STRING,
     allowNull: false
   },
-}, {
-  updatedAt: 'last_update',
-  createdAt: 'date_of_creation'
-});
-
-
-sequelize
-  .sync({ force: true })
-  .then( err => console.log('It worked!'),
-         err => console.log(`An error occurred while creating the table: ${err}`));
+};
 
 module.exports = User;

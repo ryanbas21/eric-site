@@ -3,7 +3,7 @@ const cookieParser = require('cookie-parser');
 const { User } = require('../models/user.model');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
-const sessionSchema = require('../Models/sessions.js');
+// const sessionSchema = require('../models/sessions.js');
 
 
 module.exports = {
