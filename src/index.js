@@ -23,7 +23,7 @@ const routes = (
 				<Route path='/signup' component= {SignUp } />
 				<Route path='/disclaimer' component= { Disclaimer }/>
 				<Route path='/subscribe' component= { Subscribe }/>
-				<Route path='/contact' component= { ContactUs }/>
+				<Route path='/contact' component= { ContactUs } />
 		</Route>
 	</Router>
 );

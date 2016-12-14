@@ -9,7 +9,7 @@
 *
 *******************************************************************************/
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('database_name', 'username', 'password', {
+const sequelize = new Sequelize('localhost', 'Ryan', '123', {
       dialect: "mysql",
       port:    5432,
     });

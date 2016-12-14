@@ -12,17 +12,23 @@ class AppComponent extends Component {
     this.handleForm = this.handleForm.bind(this);
   }
 
-  subscribe(){}
-  handleForm(e) {}
+  subscribe(){
 
+  }
+  handleForm(e) {
+
+  }
+  componentDidMount(){
+    console.log(this.props,'mounted');
+  }
   render(){
+    console.log(this.props);
+    let children = this.props.children.map(child =>  Inferno.cloneVNode(child) );
     return (
       <div>
-      <div>
-        <NavBar />
-      </div>
+      <NavBar />
         <div className='home-container'>
-          {this.props.children}
+          {children}
         </div>
       </div>
     )
