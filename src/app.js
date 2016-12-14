@@ -3,8 +3,8 @@ import Component from 'inferno-component';
 import NavBar from './nav-bar';
 import IndexComponent from './homepage/index';
 class AppComponent extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {};
 
 
@@ -19,11 +19,11 @@ class AppComponent extends Component {
 
   }
   componentDidMount(){
-    console.log(this.props,'mounted');
+    // console.log(this.props,'mounted');
   }
-  render(){
-    console.log(this.props);
-    let children = this.props.children.map(child =>  Inferno.cloneVNode(child) );
+  render(props){
+    console.log(this.props.children);
+    let children = this.props.children.map(child => Inferno.cloneElement(child) );
     return (
       <div>
       <NavBar />
